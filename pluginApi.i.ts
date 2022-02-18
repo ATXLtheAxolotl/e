@@ -235,7 +235,8 @@ interface EventValues {
   EntityCreate: [Entity]
   EntityDestroyed: [Entity]
   ChangeSkin: [ChangeSkin]
-  DiscordToggle: [DiscordPlugin]
+  DiscordToggle: [DiscordToggle]
+  DiscordStatus: [DiscordStatus]
 }
 
 export interface Player {
@@ -282,9 +283,13 @@ interface ChangeSkin {
   player: Player
 }
 
-interface DiscordPlugin {
+interface DiscordToggle {
   realm: number
   state: boolean
+}
+interface DiscordStatus {
+  realm: number
+  status: string
 }
 
 interface ChatCommand {
